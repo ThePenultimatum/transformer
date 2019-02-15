@@ -8,10 +8,10 @@ https://www.github.com/kyubyong/transformer
 class Hyperparams:
     '''Hyperparameters'''
     # data
-    source_train = 'corpora/train.tags.de-en.de'
-    target_train = 'corpora/train.tags.de-en.en'
-    source_test = 'corpora/IWSLT16.TED.tst2014.de-en.de.xml'
-    target_test = 'corpora/IWSLT16.TED.tst2014.de-en.en.xml'
+    source_train = 'preprocessed/A.txt'
+    target_train = 'preprocessed/B.txt'
+    source_test = 'preprocessed/A.txt'
+    target_test = 'preprocessed/B.txt'
     
     # training
     batch_size = 32 # alias = N
@@ -21,7 +21,7 @@ class Hyperparams:
     # model
     maxlen = 10 # Maximum number of words in a sentence. alias = T.
                 # Feel free to increase this if you are ambitious.
-    min_cnt = 20 # words whose occurred less than min_cnt are encoded as <UNK>.
+    min_cnt = 1#20 # words whose occurred less than min_cnt are encoded as <UNK>.
     hidden_units = 512 # alias = C
     num_blocks = 6 # number of encoder/decoder blocks
     num_epochs = 20

@@ -13,13 +13,13 @@ import codecs
 import regex
 
 def load_de_vocab():
-    vocab = [line.split()[0] for line in codecs.open('preprocessed/de.vocab.tsv', 'r', 'utf-8').read().splitlines() if int(line.split()[1])>=hp.min_cnt]
+    vocab = [line.split()[0] for line in codecs.open('preprocessed/en1.vocab.tsv', 'r', 'utf-8').read().splitlines() if int(line.split()[1])>=hp.min_cnt]
     word2idx = {word: idx for idx, word in enumerate(vocab)}
     idx2word = {idx: word for idx, word in enumerate(vocab)}
     return word2idx, idx2word
 
 def load_en_vocab():
-    vocab = [line.split()[0] for line in codecs.open('preprocessed/en.vocab.tsv', 'r', 'utf-8').read().splitlines() if int(line.split()[1])>=hp.min_cnt]
+    vocab = [line.split()[0] for line in codecs.open('preprocessed/en2.vocab.tsv', 'r', 'utf-8').read().splitlines() if int(line.split()[1])>=hp.min_cnt]
     word2idx = {word: idx for idx, word in enumerate(vocab)}
     idx2word = {idx: word for idx, word in enumerate(vocab)}
     return word2idx, idx2word
@@ -60,9 +60,12 @@ def load_test_data():
         line = regex.sub("<[^>]+>", "", line)
         line = regex.sub("[^\s\p{Latin}']", "", line) 
         return line.strip()
-    
-    de_sents = [_refine(line) for line in codecs.open(hp.source_test, 'r', 'utf-8').read().split("\n") if line and line[:4] == "<seg"]
-    en_sents = [_refine(line) for line in codecs.open(hp.target_test, 'r', 'utf-8').read().split("\n") if line and line[:4] == "<seg"]
+    print()
+    de_sents = [_refine(line) for line in codecs.open(hp.source_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
+    en_sents = [_refine(line) for line in codecs.open(hp.target_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
+
+    print(de_sents)
+    print(en_sents)
         
     X, Y, Sources, Targets = create_data(de_sents, en_sents)
     return X, Sources, Targets # (1064, 150)

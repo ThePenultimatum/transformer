@@ -1,0 +1,512 @@
+- source: They do to
+- expected: They do not
+- got: Who
+
+- source: She okay
+- expected: I hope so
+- got: I hope so
+
+- source: Wow
+- expected: Let's go
+- got: I hope so
+
+- source: No
+- expected: Okay  you're gonna need to learn how to lie
+- got: You need therapy Has anyone ever told you that
+
+- source: What good stuff
+- expected: The real you
+- got: You need therapy Has anyone ever told you
+
+- source: What crap
+- expected: Me This endless blonde babble I'm like boring myself
+- got: You need therapy Has anyone ever told you that
+
+- source: No
+- expected: do you listen to this crap
+- got: You need therapy Has anyone ever told you that
+
+- source: Then that's all you had to say
+- expected: But
+- got: But
+
+- source: Have fun tonight
+- expected: Tons
+- got: I believe we share
+
+- source: You know Chastity
+- expected: I believe we share an art instructor
+- got: I believe we share an art instructor
+
+- source: Hi
+- expected: Looks like things worked out tonight huh
+- got: I believe we share
+
+- source: Where
+- expected: You got something on your mind
+- got: You need therapy Has anyone ever told you that
+
+- source: Well there's someone I think might be
+- expected: There
+- got: Who
+
+- source: C'esc ma tete This is my head
+- expected: Right See You're ready for the quiz
+- got: I should do this
+
+- source: Gosh if only we could find Kat a boyfriend
+- expected: Let me see what I can do
+- got: I do this
+
+- source: Seems like she could get a date easy enough
+- expected: Why
+- got: Why
+
+- source: Joey
+- expected: Great
+- got: I hope so
+
+- source: Where did he go He was just here
+- expected: Who
+- got: Who
+
+- source: No
+- expected: You might wanna think about it
+- got: You need therapy Has anyone ever told you that
+
+- source: Hey sweet cheeks
+- expected: Hi Joey
+- got: I should do this
+
+- source: Perm
+- expected: It's more
+- got: I hope so
+
+- source: It's just you
+- expected: Patrick  is that a
+- got: I should do this
+
+- source: Let go
+- expected: You set me up
+- got: You need money to take a girl out
+
+- source: You looked beautiful last night you know
+- expected: So did you
+- got: Who
+
+- source: That's not
+- expected: I'm not stupid enough to repeat your mistakes
+- got: I hope so
+
+- source: Now I do Back then was a different story
+- expected: As in
+- got: But you hate Joey
+
+- source: He was like a total babe
+- expected: But you hate Joey
+- got: But you hate Joey
+
+- source: In th For a month
+- expected: Why
+- got: Why
+
+- source: Joey never told you we went out did he
+- expected: What
+- got: What
+
+- source: You are so completely unbalanced
+- expected: Can we go now
+- got: You need therapy Has anyone ever told you that
+
+- source: At least I'm not a clouted fen sucked hedgepig
+- expected: Like I'm supposed to know what that even means
+- got: You know what that even means
+
+- source: Can you at least start wearing a bra
+- expected: Oh my God does this mean you're becoming normal
+- got: But you hate Joey
+
+- source: Why
+- expected: Because she'll scare them away
+- got: I hope so
+
+- source: Wear the belly before you go
+- expected: Daddy no
+- got: Who
+
+- source: Oh God It's starting
+- expected: It's just a party Daddy
+- got: It's just a party Daddy
+
+- source: Daddy people expect me to be there
+- expected: If Kat's not going you're not going
+- got: But you not going
+
+- source: Exactly my point
+- expected: Daddy I
+- got: I should do this
+
+- source: But it's not fair  she's a mutant Daddy
+- expected: But she doesn't want to date
+- got: But you hate Joey
+
+- source: Buttholus extremus But hey you're making progress
+- expected: No I ' m not
+- got: I should do this
+
+- source: Assail your ears for one night
+- expected: It's her favorite band
+- got: It's her favorite band
+
+- source: He's pretty
+- expected: Okay I wasn't sure
+- got: I hope so
+
+- source: Her favorite uncle
+- expected: Dead at fortyone
+- got: I hope so
+
+- source: Number one She hates smokers
+- expected: It's a lung cancer issue
+- got: It's a lung cancer issue
+
+- source: You wanna go out with him
+- expected: What makes you think he'll do it
+- got: What makes you think he'll do it
+
+- source: Yeah just a minor encounter with the shrew
+- expected: That's her Bianca's sister
+- got: That's her sister
+
+- source: Sure do  my Mom's from Canada
+- expected: Guess who just signed up for a tutor
+- got: Who cares
+
+- source: Bianca Stratford Sophomore Don't even think about it
+- expected: Why not
+- got: Why not
+
+- source: You burn you pine you perish
+- expected: Who is she
+- got: Who is she
+
+- source: Couple thousand Most of them evil
+- expected: That I'm used to
+- got: I hope so
+
+- source: Get out
+- expected: How many people go here
+- got: I hope so
+
+- source: How many people were in your old school
+- expected: Thirtytwo
+- got: I should do this
+
+- source: I was kidding People actually live there
+- expected: Yeah A couple We're outnumbered by the cows though
+- got: A couple We're outnumbered by the cows though
+
+- source: So  which Dakota you from
+- expected: North actually How'd you
+- got: I hope so
+
+- source: So they tell me
+- expected: C'mon I'm supposed to give you the tour
+- got: I should do you
+
+- source: You get the girl
+- expected: You the new guy
+- got: You need therapy Has anyone ever told you that
+
+- source: Where
+- expected: What's the worst
+- got: You need therapy Has anyone ever told you that
+
+- source: You makin' any headway
+- expected: She kissed me
+- got: You need therapy Has anyone ever told you that
+
+- source: Sure
+- expected: Then go get her
+- got: You need therapy Has anyone ever told you that
+
+- source: She's partial to Joey not me
+- expected: Cameron  do you like the girl
+- got: Who
+
+- source: It's off The whole thing
+- expected: What 're you talking about
+- got: What 're you talking about
+
+- source: Don't make me do it man
+- expected: Cameron I'm a little busy
+- got: Why not
+
+- source: Yeah  we'll see
+- expected: What've you got for me
+- got: I got for me
+
+- source: Your sister here
+- expected: Leave my sister alone
+- got: I should do this
+
+- source: Where ya goin
+- expected: Away
+- got: You need therapy Has anyone ever told you that
+
+- source: Hey  do you mind
+- expected: Not at all
+- got: I should do this
+
+- source: How'd you do it
+- expected: Do what
+- got: Who
+
+- source: It's about time
+- expected: A deal's a deal
+- got: I should do this
+
+- source: Forget it
+- expected: Forget her sister then
+- got: I hope so
+
+- source: What
+- expected: A hundred bucks a date
+- got: You need therapy Has anyone ever told you that
+
+- source: Fifty and you've got your man
+- expected: When I shell out fifty I expect results
+- got: I shell out fifty I expect results
+
+- source: Fine thirty
+- expected: Take it or leave it This isn't a negotiation
+- got: I hope so
+
+- source: You just said
+- expected: You need money to take a girl out
+- got: You need money to take a girl out
+
+- source: What do you think
+- expected: Two legs nice rack
+- got: I should do this
+
+- source: Hey  it's all for the higher good right
+- expected: Yeah
+- got: Yeah
+
+- source: What We took bathes together when we were kids
+- expected: You better not fuck this up I'm heavily invested
+- got: You better not fuck this up I'm heavily invested
+
+- source: Uh yeah We're old friend
+- expected: You and Verona
+- got: You and Verona
+
+- source: Nope  just came by to chat
+- expected: We don't chat
+- got: Who
+
+- source: Hey
+- expected: Are you lost
+- got: I should do this
+
+- source: Have you seen him
+- expected: Who
+- got: Who
+
+- source: What'd he say
+- expected: Who cares
+- got: Who cares
+
+- source: You think this'll work
+- expected: No fear
+- got: No
+
+- source: William didn't even go to high school
+- expected: That's never been proven
+- got: That's never been proven
+
+- source: What's this
+- expected: An attempted slit
+- got: I should do
+
+- source: He always look so
+- expected: Block E
+- got: Block E
+
+- source: Who's that
+- expected: Patrick Verona Random skid
+- got: I should do this
+
+- source: Oh Bianca Can you get me my freshman yearbook
+- expected: Don ' t you even dare
+- got: Who
+
+- source: I didn't care about the money
+- expected: A Fender Strat You bought this
+- got: You need therapy Has anyone ever
+
+- source: That ' s completely adorable
+- expected: It gets worse  you still have your freshman yearbook
+- got: But you still have your freshman yearbook
+
+- source: It's just something I had You know
+- expected: Oh huh
+- got: You don't care if huh
+
+- source: You tell me
+- expected: You need therapy Has anyone ever told you that
+- got: You need therapy Has anyone ever told you that
+
+- source: Why not
+- expected: Because I don't want to It's a stupid tradition
+- got: I hope so
+
+- source: No what
+- expected: No I won't go with you
+- got: I should do you
+
+- source: You know what I mean
+- expected: No
+- got: No
+
+- source: Go to the prom with me
+- expected: Is that a request or a command
+- got: You need therapy Has anyone ever told you that
+
+- source: No one else knows
+- expected: You're amazingly selfassured Has anyone ever told you that
+- got: It's her favorite band
+
+- source: You're sweet And sexy And completely hot for me
+- expected: What
+- got: What
+
+- source: I hate peas
+- expected: No  something real Something no one else knows
+- got: You need therapy Has anyone ever told you that
+
+- source: I know the porn career's a lie
+- expected: Tell me something true
+- got: You don't care something true
+
+- source: The duck
+- expected: Hearsay
+- got: I should do this
+
+- source: State trooper
+- expected: Fallacy
+- got: You need therapy Has anyone ever told you that
+
+- source: You up for it
+- expected: For
+- got: I should do this
+
+- source: How
+- expected: You never disappointed me
+- got: I hope so
+
+- source: Something like that
+- expected: Then you screwed up
+- got: I should do you
+
+- source: Acting the way we do
+- expected: Yes
+- got: What
+
+- source: Yeah well don't let it get out
+- expected: So what's your excuse
+- got: So what's your excuse
+
+- source: I dazzled him with my wit
+- expected: A soft side Who knew
+- got: Who
+
+- source: Put your right foot there
+- expected: Forget it I'm stayin'
+- got: I should do this
+
+- source: C'mon It's not that bad
+- expected: Try lookin' at it from this angle
+- got: I should do this
+
+- source: Pleasant
+- expected: Wholesome
+- got: It's her
+
+- source: I heard there was a poetry reading
+- expected: You 're so
+- got: You 're so
+
+- source: He just wants me to be someone I'm not
+- expected: Who
+- got: Who
+
+- source: Start a band
+- expected: My father wouldn't approve of that that
+- got: I hope so
+
+- source: Do what
+- expected: This
+- got: I hope so
+
+- source: Why'd you lie
+- expected: I should do this
+- got: I should do this
+
+- source: No you weren't
+- expected: Then why'd you ask
+- got: I should do this
+
+- source: Were you in jail
+- expected: Maybe
+- got: I should do
+
+- source: When you were gone last year  where were you
+- expected: Busy
+- got: Busy
+
+- source: Kat Wake up
+- expected: What
+- got: What
+
+- source: I thought you were above all that
+- expected: You know what they say
+- got: You 're so
+
+- source: Dorsey
+- expected: I hate him
+- got: I believe we share an art instructor
+
+- source: Why'd you let him get to you
+- expected: Who
+- got: Who
+
+- source: Sure I do
+- expected: Why
+- got: You need therapy Has anyone ever told you that
+
+- source: I told you
+- expected: You don't care if I die
+- got: I hope so
+
+- source: You're not okay
+- expected: I just need to lie down for awhile
+- got: I just need to lie down for awhile
+
+- source: Okay
+- expected: I'm fine I'm
+- got: I
+
+- source: I say do what you wanna do
+- expected: Funny you're the only one
+- got: Who
+
+- source: You know who The Raincoats are
+- expected: Why don't you
+- got: Why don't you
+
+- source: Excuse me
+- expected: That's what you want isn't it
+- got: I should do you
+

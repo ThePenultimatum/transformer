@@ -25,6 +25,9 @@ def eval():
     
     # Load data
     X, Sources, Targets = load_test_data()
+    print(Sources)
+    print(Targets)
+    print(X)
     de2idx, idx2de = load_de_vocab()
     en2idx, idx2en = load_en_vocab()
      
@@ -46,6 +49,7 @@ def eval():
             with codecs.open("results/" + mname, "w", "utf-8") as fout:
                 list_of_refs, hypotheses = [], []
                 for i in range(len(X) // hp.batch_size):
+                    print(i)
                      
                     ### Get mini-batches
                     x = X[i*hp.batch_size: (i+1)*hp.batch_size]
@@ -55,11 +59,14 @@ def eval():
                     ### Autoregressive inference
                     preds = np.zeros((hp.batch_size, hp.maxlen), np.int32)
                     for j in range(hp.maxlen):
+                        print("j: " + str(j))
                         _preds = sess.run(g.preds, {g.x: x, g.y: preds})
                         preds[:, j] = _preds[:, j]
                      
                     ### Write to file
                     for source, target, pred in zip(sources, targets, preds): # sentence-wise
+                        print("source, target, pred")
+                        print("source, target, pred: " + str(source) + ", " + str(target) + ", " + str(pred))
                         got = " ".join(idx2en[idx] for idx in pred).split("</S>")[0].strip()
                         fout.write("- source: " + source +"\n")
                         fout.write("- expected: " + target + "\n")
@@ -74,8 +81,8 @@ def eval():
                             hypotheses.append(hypothesis)
               
                 ## Calculate bleu score
-                score = corpus_bleu(list_of_refs, hypotheses)
-                fout.write("Bleu Score = " + str(100*score))
+                #score = corpus_bleu(list_of_refs, hypotheses)
+                #fout.write("Bleu Score = " + str(100*score))
                                           
 if __name__ == '__main__':
     eval()

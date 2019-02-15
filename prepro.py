@@ -34,6 +34,6 @@ def make_vocab(fpath, fname):
             fout.write(u"{}\t{}\n".format(word, cnt))
 
 if __name__ == '__main__':
-    make_vocab(hp.source_train, "de.vocab.tsv")
-    make_vocab(hp.target_train, "en.vocab.tsv")
+    make_vocab(hp.source_train, "en1.vocab.tsv")
+    make_vocab(hp.target_train, "en2.vocab.tsv")
     print("Done")
