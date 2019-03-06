@@ -18,7 +18,7 @@ from data_load import load_test_data, load_de_vocab, load_en_vocab
 from train import Graph
 from nltk.translate.bleu_score import corpus_bleu
 
-def eval(prompt): 
+def eval(): 
     # Load graph
     g = Graph(is_training=False)
     print("Graph loaded")
@@ -85,9 +85,6 @@ def eval(prompt):
                 #fout.write("Bleu Score = " + str(100*score))
                                           
 if __name__ == '__main__':
-    while(1):
-        prompt = raw_input()
-        res = eval(prompt)
-        print(res)
+    eval()
     
     
