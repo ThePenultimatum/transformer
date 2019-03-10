@@ -180,7 +180,7 @@ if __name__ == '__main__':
                 
             gs = sess.run(g.global_step)   
             sv.saver.save(sess, hp.logdir + '/model_epoch_%02d_gs_%d' % (epoch, gs))
-    
+
     print("Done")    
     
 

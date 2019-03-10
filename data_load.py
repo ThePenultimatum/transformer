@@ -60,13 +60,17 @@ def load_test_data():
         line = regex.sub("<[^>]+>", "", line)
         line = regex.sub("[^\s\p{Latin}']", "", line) 
         return line.strip()
-    print()
-    de_sents = [_refine(line) for line in codecs.open(hp.source_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
-    en_sents = [_refine(line) for line in codecs.open(hp.target_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
+    # print()
+    # de_sents = [_refine(line) for line in codecs.open(hp.source_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
+    # en_sents = [_refine(line) for line in codecs.open(hp.target_test, 'r', 'utf-8').read().split("\n") if line and line[0] != "<"]
 
-    print(de_sents)
-    print(en_sents)
-        
+    
+    
+    de_sents = [_refine(input(">>> "))]
+    en_sents = [_refine("hi how are you welcome back to my channel")]
+
+    # print(de_sents)
+    # print(en_sents)
     X, Y, Sources, Targets = create_data(de_sents, en_sents)
     return X, Sources, Targets # (1064, 150)
 

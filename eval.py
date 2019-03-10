@@ -18,16 +18,19 @@ from data_load import load_test_data, load_de_vocab, load_en_vocab
 from train import Graph
 from nltk.translate.bleu_score import corpus_bleu
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 def eval(): 
     # Load graph
     g = Graph(is_training=False)
-    print("Graph loaded")
+    # print("Graph loaded")
     
     # Load data
     X, Sources, Targets = load_test_data()
-    print(Sources)
-    print(Targets)
-    print(X)
+    #print(Sources)
+    #print(Targets)
+    #print(X)
     de2idx, idx2de = load_de_vocab()
     en2idx, idx2en = load_en_vocab()
      
@@ -39,51 +42,87 @@ def eval():
         with sv.managed_session(config=tf.ConfigProto(allow_soft_placement=True)) as sess:
             ## Restore parameters
             sv.saver.restore(sess, tf.train.latest_checkpoint(hp.logdir))
-            print("Restored!")
+            # print("Restored!")
               
             ## Get model name
             mname = open(hp.logdir + '/checkpoint', 'r').read().split('"')[1] # model name
-             
+
+            # for i in range(len(X) // hp.batch_size):
+            # for i in range(1):
+                     
+            #     ### Get mini-batches
+            #     x = X[i*hp.batch_size: (i+1)*hp.batch_size]
+            #     sources = Sources[i*hp.batch_size: (i+1)*hp.batch_size]
+            #     targets = Targets[i*hp.batch_size: (i+1)*hp.batch_size]
+                 
+            #     ### Autoregressive inference
+            #     preds = np.zeros((hp.batch_size, hp.maxlen), np.int32)
+            #     for j in range(hp.maxlen):
+            #         _preds = sess.run(g.preds, {g.x: x, g.y: preds})
+            #         preds[:, j] = _preds[:, j]
+            #         print(j)
+
+            #     for source, target, pred in zip(sources, targets, preds): # sentence-wise
+            #         got = " ".join(idx2en[idx] for idx in pred).split("</S>")[0].strip()
+            #         print(got)
+
+            sources = Sources[0:1]
+            targets = Targets[0:1]
+            x = X[0:1]
+            list_of_refs, hypotheses = [], []
+            preds = np.zeros((1, hp.maxlen), np.int32)
+            for j in range(hp.maxlen):
+            	_preds = sess.run(g.preds, {g.x: x, g.y: preds})
+            	preds[:, j] = _preds[:, j]
+            for source, target, pred in zip(sources, targets, preds):
+                got = " ".join(idx2en[idx] for idx in pred).split("</S>")[0].strip()
+                print(got)
+
+
+
             ## Inference
-            if not os.path.exists('results'): os.mkdir('results')
-            with codecs.open("results/" + mname, "w", "utf-8") as fout:
-                list_of_refs, hypotheses = [], []
-                for i in range(len(X) // hp.batch_size):
-                    print(i)
+            # if not os.path.exists('results'): os.mkdir('results')
+            # with codecs.open("results/" + mname, "w", "utf-8") as fout:
+            #     list_of_refs, hypotheses = [], []
+            #     for i in range(len(X) // hp.batch_size):
+            #         print(i)
                      
-                    ### Get mini-batches
-                    x = X[i*hp.batch_size: (i+1)*hp.batch_size]
-                    sources = Sources[i*hp.batch_size: (i+1)*hp.batch_size]
-                    targets = Targets[i*hp.batch_size: (i+1)*hp.batch_size]
+            #         ### Get mini-batches
+            #         x = X[i*hp.batch_size: (i+1)*hp.batch_size]
+            #         sources = Sources[i*hp.batch_size: (i+1)*hp.batch_size]
+            #         targets = Targets[i*hp.batch_size: (i+1)*hp.batch_size]
                      
-                    ### Autoregressive inference
-                    preds = np.zeros((hp.batch_size, hp.maxlen), np.int32)
-                    for j in range(hp.maxlen):
-                        print("j: " + str(j))
-                        _preds = sess.run(g.preds, {g.x: x, g.y: preds})
-                        preds[:, j] = _preds[:, j]
-                     
-                    ### Write to file
-                    for source, target, pred in zip(sources, targets, preds): # sentence-wise
-                        print("source, target, pred")
-                        print("source, target, pred: " + str(source) + ", " + str(target) + ", " + str(pred))
-                        got = " ".join(idx2en[idx] for idx in pred).split("</S>")[0].strip()
-                        fout.write("- source: " + source +"\n")
-                        fout.write("- expected: " + target + "\n")
-                        fout.write("- got: " + got + "\n\n")
-                        fout.flush()
+            #         ### Autoregressive inference
+            #         preds = np.zeros((hp.batch_size, hp.maxlen), np.int32)
+            #         for j in range(hp.maxlen):
+            #             #print("j: " + str(j))
+            #             _preds = sess.run(g.preds, {g.x: x, g.y: preds})
+            #             preds[:, j] = _preds[:, j]
+                
+            #         ### Write to file
+            #         for source, target, pred in zip(sources, targets, preds): # sentence-wise
+            #             #print("source, target, pred")
+            #             #print("source, target, pred: " + str(source) + ", " + str(target) + ", " + str(pred))
+            #             got = " ".join(idx2en[idx] for idx in pred).split("</S>")[0].strip()
+            #             fout.write("- source: " + source +"\n")
+            #             fout.write("- expected: " + target + "\n")
+            #             fout.write("- got: " + got + "\n\n")
+            #             fout.flush()
                           
-                        # bleu score
-                        ref = target.split()
-                        hypothesis = got.split()
-                        if len(ref) > 3 and len(hypothesis) > 3:
-                            list_of_refs.append([ref])
-                            hypotheses.append(hypothesis)
+            #             # bleu score
+            #             ref = target.split()
+            #             hypothesis = got.split()
+            #             if len(ref) > 3 and len(hypothesis) > 3:
+            #                 list_of_refs.append([ref])
+            #                 hypotheses.append(hypothesis)
               
                 ## Calculate bleu score
                 #score = corpus_bleu(list_of_refs, hypotheses)
                 #fout.write("Bleu Score = " + str(100*score))
                                           
 if __name__ == '__main__':
-    eval()
-    print("Done")
+    while True:
+        eval()
+    # print("Done")
+    
+    
